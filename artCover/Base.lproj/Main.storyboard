@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dNC-BM-haI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oeO-3S-x69">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -34,26 +34,69 @@
                             <outlet property="delegate" destination="dNC-BM-haI" id="JCM-dD-SyM"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Kej-Nq-gQ2"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdT-FM-B3A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="24"/>
+            <point key="canvasLocation" x="1280.1526717557251" y="23.943661971830988"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailVC-->
         <scene sceneID="aqk-im-qx8">
             <objects>
-                <viewController id="ldM-aI-9Ru" sceneMemberID="viewController">
+                <viewController id="ldM-aI-9Ru" customClass="DetailVC" customModule="artCover" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xNf-uk-7ci">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DPf-P2-R8u">
+                                <rect key="frame" x="9" y="103.00000000000003" width="375" height="387.66666666666674"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2v-q8-PCM">
+                                <rect key="frame" x="16" y="533.66666666666663" width="361" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Uf7-No-QVu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Uf7-No-QVu" firstAttribute="bottom" secondItem="w2v-q8-PCM" secondAttribute="bottom" constant="264" id="9en-C1-aUA"/>
+                            <constraint firstItem="Uf7-No-QVu" firstAttribute="trailing" secondItem="DPf-P2-R8u" secondAttribute="trailing" constant="9" id="Bly-EF-2p1"/>
+                            <constraint firstItem="DPf-P2-R8u" firstAttribute="leading" secondItem="Uf7-No-QVu" secondAttribute="leading" constant="9" id="HD8-AJ-Fc4"/>
+                            <constraint firstItem="w2v-q8-PCM" firstAttribute="leading" secondItem="Uf7-No-QVu" secondAttribute="leading" constant="16" id="VzM-Zi-GXF"/>
+                            <constraint firstItem="w2v-q8-PCM" firstAttribute="top" secondItem="DPf-P2-R8u" secondAttribute="bottom" constant="43" id="eP8-5b-JqV"/>
+                            <constraint firstItem="Uf7-No-QVu" firstAttribute="trailing" secondItem="w2v-q8-PCM" secondAttribute="trailing" constant="16" id="gHs-qu-rN8"/>
+                            <constraint firstItem="DPf-P2-R8u" firstAttribute="top" secondItem="Uf7-No-QVu" secondAttribute="top" id="gZG-rv-4uv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mI0-dR-Qap"/>
+                    <connections>
+                        <outlet property="image" destination="DPf-P2-R8u" id="t6C-Zc-qkI"/>
+                        <outlet property="titleLabel" destination="w2v-q8-PCM" id="PvW-zx-6Zw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmB-nx-D8L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="24"/>
+            <point key="canvasLocation" x="1999.2366412213739" y="23.943661971830988"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6W6-uZ-zXI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oeO-3S-x69" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v32-5I-Heh">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dNC-BM-haI" kind="relationship" relationship="rootViewController" id="qAK-Zt-uiz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BDv-9w-JF0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353.43511450381681" y="23.943661971830988"/>
         </scene>
     </scenes>
     <resources>

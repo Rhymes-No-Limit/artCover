@@ -2,16 +2,16 @@ import UIKit
 
 class TrackList: UITableViewController {
     
-    let imageNameArray = ["Alberta Ruiz - 7 Elements",
-    "Dave Wincent - red Eye",
-    "E-Spectro - End Station",
-    "Edna Ann - Phasma",
-    "Ilija Djokovic - Delusion",
-    "John Baptiste - Mycelium",
-    "Lane 8 - Fingerprint",
-    "Mac Voughn - Pink is My favorite Color",
-    "Metodi Hristov, Gally - BadMash",
-    "Veerus, Maxie, Devine - nightmore"]
+    let imageNameArray = ["Alberto Ruiz - 7 Elements (Original Mix)",
+    "Dave Wincent - Red Eye (Original Mix)",
+    "E-Spectro - End Station (Original Mix)",
+    "Edna Ann - Phasma (Konstantin Yoodza Remix)",
+    "Ilija Djokovic - Delusion (Original Mix)",
+    "John Baptiste - Mycelium (Original Mix)",
+    "Lane 8 - Fingerprint (Original Mix)",
+    "Mac Vaughn - Pink Is My Favorite Color (Alex Stein Remix)",
+    "Metodi Hristov, Gallya - Badmash (Original Mix)",
+    "Veerus, Maxie Devine - Nightmare (Original Mix)"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,14 +81,18 @@ class TrackList: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowDetail" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let detailsVC = segue.destination as! DetailVC
+                detailsVC.trackTitle = imageNameArray[indexPath.row]
+            }
+        }
     }
-    */
+    
 
 }
