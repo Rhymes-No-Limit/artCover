@@ -2,7 +2,16 @@ import UIKit
 
 class TrackList: UITableViewController {
     
-    
+    let imageNameArray = ["Alberta Ruiz - 7 Elements",
+    "Dave Wincent - red Eye",
+    "E-Spectro - End Station",
+    "Edna Ann - Phasma",
+    "Ilija Djokovic - Delusion",
+    "John Baptiste - Mycelium",
+    "Lane 8 - Fingerprint",
+    "Mac Voughn - Pink is My favorite Color",
+    "Metodi Hristov, Gally - BadMash",
+    "Veerus, Maxie, Devine - nightmore"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,25 +25,26 @@ class TrackList: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return imageNameArray.count
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Title", for: indexPath)
+        
+        cell.imageView?.image = UIImage(named: imageNameArray[indexPath.row])
+        cell.textLabel?.text = imageNameArray[indexPath.row]
+        cell.textLabel?.numberOfLines = 0
+        
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
 
     /*
     // Override to support conditional editing of the table view.

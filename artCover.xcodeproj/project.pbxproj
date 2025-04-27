@@ -13,6 +13,7 @@
 		F3AED49C2DBE6CEB006ABFF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AED49B2DBE6CEB006ABFF1 /* Assets.xcassets */; };
 		F3AED49F2DBE6CEB006ABFF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AED49D2DBE6CEB006ABFF1 /* LaunchScreen.storyboard */; };
 		F3AED4A72DBE6F11006ABFF1 /* TrackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AED4A62DBE6F11006ABFF1 /* TrackList.swift */; };
+		F3AED4A92DBE7500006ABFF1 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AED4A82DBE7500006ABFF1 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F3AED49E2DBE6CEB006ABFF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3AED4A02DBE6CEB006ABFF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3AED4A62DBE6F11006ABFF1 /* TrackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackList.swift; sourceTree = "<group>"; };
+		F3AED4A82DBE7500006ABFF1 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				F3AED4942DBE6CE6006ABFF1 /* SceneDelegate.swift */,
 				F3AED4A62DBE6F11006ABFF1 /* TrackList.swift */,
 				F3AED4982DBE6CE6006ABFF1 /* Main.storyboard */,
+				F3AED4A82DBE7500006ABFF1 /* DetailVC.swift */,
 				F3AED49B2DBE6CEB006ABFF1 /* Assets.xcassets */,
 				F3AED49D2DBE6CEB006ABFF1 /* LaunchScreen.storyboard */,
 				F3AED4A02DBE6CEB006ABFF1 /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3AED4A72DBE6F11006ABFF1 /* TrackList.swift in Sources */,
+				F3AED4A92DBE7500006ABFF1 /* DetailVC.swift in Sources */,
 				F3AED4932DBE6CE6006ABFF1 /* AppDelegate.swift in Sources */,
 				F3AED4952DBE6CE6006ABFF1 /* SceneDelegate.swift in Sources */,
 			);
